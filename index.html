@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Portfólio de Fellipe Faria, Desenvolvedor Backend & Full-Stack."
+		/>
+		<title>Fellipe Faria — Desenvolvedor Backend</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							ink: "#101311",
+							panel: "#171b18",
+							line: "#2b332e",
+							code: "#9adf7f",
+							muted: "#9ca79e",
+						},
+						fontFamily: {
+							sans: [
+								"Inter",
+								"ui-sans-serif",
+								"system-ui",
+								"sans-serif",
+							],
+							mono: [
+								"JetBrains Mono",
+								"ui-monospace",
+								"SFMono-Regular",
+								"monospace",
+							],
+						},
+					},
+				},
+			};
+		</script>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+			html {
+				scroll-behavior: smooth;
+			}
+			body {
+				font-family: "Manrope", sans-serif;
+			}
+			.mono {
+				font-family: "DM Mono", monospace;
+			}
+			.reveal {
+				opacity: 0;
+				transform: translateY(24px);
+				transition:
+					opacity 700ms ease,
+					transform 700ms ease;
+			}
+			.reveal.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			@media (prefers-reduced-motion: reduce) {
+				html {
+					scroll-behavior: auto;
+				}
+				.reveal,
+				.reveal.visible {
+					opacity: 1;
+					transform: none;
+					transition: none;
+				}
+			}
+		</style>
+	</head>
+
+	<body
+		class="bg-ink text-stone-100 antialiased selection:bg-code selection:text-ink"
+	>
+		<header
+			class="sticky top-0 z-50 border-b border-line/80 bg-ink/95 backdrop-blur"
+		>
+			<div
+				class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8"
+			>
+				<a
+					href="#sobre"
+					class="mono text-sm font-medium tracking-tight text-code"
+					>FF<span class="text-stone-300">.dev</span></a
+				>
+				<button
+					id="menu-button"
+					class="rounded-sm border border-line px-3 py-2 text-xs uppercase tracking-widest text-stone-200 md:hidden"
+					aria-expanded="false"
+					aria-controls="menu"
+				>
+					Menu
+				</button>
+				<nav
+					id="menu"
+					class="absolute left-0 top-full hidden w-full border-b border-line bg-ink px-5 py-5 md:static md:block md:w-auto md:border-0 md:bg-transparent md:p-0"
+					aria-label="Navegação principal"
+				>
+					<ul
+						class="mono flex flex-col gap-4 text-xs uppercase tracking-widest text-muted md:flex-row md:gap-7"
+					>
+						<li>
+							<a class="transition hover:text-code" href="#sobre"
+								>Sobre</a
+							>
+						</li>
+						<li>
+							<a
+								class="transition hover:text-code"
+								href="#habilidades"
+								>Habilidades</a
+							>
+						</li>
+						<li>
+							<a
+								class="transition hover:text-code"
+								href="#projetos"
+								>Projetos</a
+							>
+						</li>
+						<li>
+							<a
+								class="transition hover:text-code"
+								href="#contato"
+								>Contato</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section id="sobre" class="scroll-mt-20 border-b border-line">
+				<div
+					class="mx-auto grid min-h-[calc(100svh-65px)] max-w-7xl items-center gap-12 px-5 py-20 md:grid-cols-[1.45fr_.55fr] md:px-8 md:py-28"
+				>
+					<div class="reveal">
+						<p
+							class="mono mb-6 text-xs uppercase tracking-[0.18em] text-code"
+						>
+							// disponível para oportunidades
+						</p>
+						<h1
+							class="max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-stone-50 sm:text-5xl lg:text-7xl"
+						>
+							Desenvolvedor
+							<span class="text-code">Backend</span> &amp;
+							Full-Stack.
+						</h1>
+						<p
+							class="mt-8 max-w-2xl text-base leading-8 text-stone-300 sm:text-lg"
+						>
+							Estudante de Análise e Desenvolvimento de Sistemas
+							(FATEC) e Técnico em Desenvolvimento de Sistemas
+							(ETEC). Busco oportunidades em Backend ou
+							Full-Stack, aplicando conhecimentos sólidos em
+							Node.js, Java e bancos de dados para desenvolver
+							soluções escaláveis e contribuir com a equipe.
+						</p>
+						<div class="mt-10 flex flex-wrap gap-3">
+							<a
+								class="inline-flex items-center border border-code bg-code px-5 py-3 text-sm font-bold text-ink transition hover:bg-transparent hover:text-code"
+								href="https://github.com/FellipeFaria"
+								target="_blank"
+								rel="noopener noreferrer"
+								>GitHub <span class="ml-3 mono">↗</span></a
+							>
+							<a
+								class="inline-flex items-center border border-line px-5 py-3 text-sm font-semibold text-stone-200 transition hover:border-code hover:text-code"
+								href="https://linkedin.com/in/fellipe-faria"
+								target="_blank"
+								rel="noopener noreferrer"
+								>LinkedIn <span class="ml-3 mono">↗</span></a
+							>
+							<a
+								class="inline-flex items-center border border-line px-5 py-3 text-sm font-semibold text-stone-200 transition hover:border-code hover:text-code"
+								href="https://www.99freelas.com.br/user/fellipe-faria"
+								target="_blank"
+								rel="noopener noreferrer"
+								>99freelas <span class="ml-3 mono">↗</span></a
+							>
+						</div>
+					</div>
+					<div
+						class="reveal relative mx-auto w-full max-w-xs md:max-w-none"
+					>
+						<div
+							class="absolute -inset-3 border border-code/30"
+						></div>
+						<img
+							src="fellipe_faria.png"
+							alt="Retrato de Fellipe Faria"
+							class="relative aspect-square w-full border border-line bg-panel object-cover"
+						/>
+						<p
+							class="mono absolute -bottom-7 left-0 text-[10px] uppercase tracking-[0.16em] text-muted"
+						>
+							Fellipe Faria / 2026
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="habilidades" class="scroll-mt-20 border-b border-line">
+				<div class="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
+					<div class="reveal mb-14 max-w-xl">
+						<p
+							class="mono mb-4 text-xs uppercase tracking-[0.18em] text-code"
+						>
+							01 / especialidades
+						</p>
+						<h2
+							class="text-3xl font-bold tracking-tight sm:text-4xl"
+						>
+							Habilidades técnicas
+						</h2>
+					</div>
+					<div
+						class="grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-4"
+					>
+						<article class="reveal bg-panel p-6 sm:p-7">
+							<h3
+								class="mono mb-7 text-xs uppercase tracking-widest text-code"
+							>
+								Backend
+							</h3>
+							<ul class="space-y-3 text-sm text-stone-300">
+								<li>Node.js</li>
+								<li>Java</li>
+								<li>Python</li>
+								<li>PHP</li>
+								<li>APIs RESTful</li>
+								<li>Spring Boot</li>
+							</ul>
+						</article>
+						<article class="reveal bg-panel p-6 sm:p-7">
+							<h3
+								class="mono mb-7 text-xs uppercase tracking-widest text-code"
+							>
+								Banco de Dados
+							</h3>
+							<ul class="space-y-3 text-sm text-stone-300">
+								<li>PostgreSQL</li>
+								<li>MySQL</li>
+								<li>Prisma ORM</li>
+							</ul>
+						</article>
+						<article class="reveal bg-panel p-6 sm:p-7">
+							<h3
+								class="mono mb-7 text-xs uppercase tracking-widest text-code"
+							>
+								Frontend
+							</h3>
+							<ul class="space-y-3 text-sm text-stone-300">
+								<li>TypeScript</li>
+								<li>JavaScript</li>
+								<li>React.js</li>
+								<li>HTML5</li>
+								<li>CSS3</li>
+							</ul>
+						</article>
+						<article class="reveal bg-panel p-6 sm:p-7">
+							<h3
+								class="mono mb-7 text-xs uppercase tracking-widest text-code"
+							>
+								Ferramentas
+							</h3>
+							<ul class="space-y-3 text-sm text-stone-300">
+								<li>Git/GitHub</li>
+								<li>Clean Architecture</li>
+								<li>POO</li>
+								<li>Clean Code</li>
+							</ul>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section id="projetos" class="scroll-mt-20 border-b border-line">
+				<div class="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
+					<div
+						class="reveal mb-14 flex flex-col justify-between gap-4 md:flex-row md:items-end"
+					>
+						<div>
+							<p
+								class="mono mb-4 text-xs uppercase tracking-[0.18em] text-code"
+							>
+								02 / projetos selecionados
+							</p>
+							<h2
+								class="text-3xl font-bold tracking-tight sm:text-4xl"
+							>
+								Construído para resolver.
+							</h2>
+						</div>
+						<p class="mono text-xs text-muted">04 projetos</p>
+					</div>
+					<div class="border-t border-line">
+						<article
+							class="reveal group grid gap-5 border-b border-line py-8 md:grid-cols-[72px_1fr_auto] md:gap-8 md:py-10"
+						>
+							<p class="mono text-xs text-muted">01</p>
+							<div>
+								<h3
+									class="text-xl font-bold text-stone-100 transition group-hover:text-code"
+								>
+									LinkHub API
+								</h3>
+								<p
+									class="mt-3 max-w-3xl text-sm leading-7 text-stone-300"
+								>
+									Desenvolvi do zero uma API REST em Node.js
+									com TypeScript para gerenciamento de links.
+									Implementei autenticação segura de usuários
+									via JWT e modelei o banco de dados
+									PostgreSQL utilizando Prisma ORM.
+								</p>
+								<div
+									class="mono mt-5 flex flex-wrap gap-x-4 gap-y-2 text-[11px] text-muted"
+								>
+									<span>Node.js</span><span>TypeScript</span
+									><span>PostgreSQL</span><span>JWT</span>
+								</div>
+							</div>
+							<a
+								href="https://github.com/FellipeFaria/LinkHub-API"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="mono self-start border-b border-line pb-1 text-xs text-stone-200 transition hover:border-code hover:text-code"
+								>VER REPOSITÓRIO ↗</a
+							>
+						</article>
+						<article
+							class="reveal group grid gap-5 border-b border-line py-8 md:grid-cols-[72px_1fr_auto] md:gap-8 md:py-10"
+						>
+							<p class="mono text-xs text-muted">02</p>
+							<div>
+								<h3
+									class="text-xl font-bold text-stone-100 transition group-hover:text-code"
+								>
+									Gestão de Projetos
+								</h3>
+								<p
+									class="mt-3 max-w-3xl text-sm leading-7 text-stone-300"
+								>
+									Estruturei uma aplicação backend em Java
+									para a resolução de um desafio técnico,
+									aplicando conceitos sólidos de Clean
+									Architecture e código limpo.
+								</p>
+								<div
+									class="mono mt-5 flex flex-wrap gap-x-4 gap-y-2 text-[11px] text-muted"
+								>
+									<span>Java</span><span>Spring Boot</span
+									><span>Clean Architecture</span>
+								</div>
+							</div>
+							<a
+								href="https://github.com/FellipeFaria/dev.matheuslf.desafio.inscritos.fellipefaria"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="mono self-start border-b border-line pb-1 text-xs text-stone-200 transition hover:border-code hover:text-code"
+								>VER REPOSITÓRIO ↗</a
+							>
+						</article>
+						<article
+							class="reveal group grid gap-5 border-b border-line py-8 md:grid-cols-[72px_1fr_auto] md:gap-8 md:py-10"
+						>
+							<p class="mono text-xs text-muted">03</p>
+							<div>
+								<h3
+									class="text-xl font-bold text-stone-100 transition group-hover:text-code"
+								>
+									Assistente de Voz IA
+								</h3>
+								<p
+									class="mt-3 max-w-3xl text-sm leading-7 text-stone-300"
+								>
+									Criei uma aplicação integrando Python
+									diretamente com a API de Inteligência
+									Artificial do Google.
+								</p>
+								<div
+									class="mono mt-5 flex flex-wrap gap-x-4 gap-y-2 text-[11px] text-muted"
+								>
+									<span>Python</span
+									><span>Integração de IA</span>
+								</div>
+							</div>
+							<a
+								href="https://github.com/FellipeFaria/ChatIA"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="mono self-start border-b border-line pb-1 text-xs text-stone-200 transition hover:border-code hover:text-code"
+								>VER REPOSITÓRIO ↗</a
+							>
+						</article>
+						<article
+							class="reveal group grid gap-5 border-b border-line py-8 md:grid-cols-[72px_1fr_auto] md:gap-8 md:py-10"
+						>
+							<p class="mono text-xs text-muted">04</p>
+							<div>
+								<h3
+									class="text-xl font-bold text-stone-100 transition group-hover:text-code"
+								>
+									Training Hub
+								</h3>
+								<p
+									class="mt-3 max-w-3xl text-sm leading-7 text-stone-300"
+								>
+									Sistema web projetado para gerenciar e
+									agendar treinamentos corporativos, onde
+									atuei na lógica de backend e modelagem do
+									banco de dados relacional.
+								</p>
+								<div
+									class="mono mt-5 flex flex-wrap gap-x-4 gap-y-2 text-[11px] text-muted"
+								>
+									<span>PHP</span><span>MySQL</span
+									><span>Full-Stack</span>
+								</div>
+							</div>
+							<a
+								href="https://github.com/FellipeFaria/TrainingHub"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="mono self-start border-b border-line pb-1 text-xs text-stone-200 transition hover:border-code hover:text-code"
+								>VER REPOSITÓRIO ↗</a
+							>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section id="contato" class="scroll-mt-20">
+				<div class="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
+					<div
+						class="reveal grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start"
+					>
+						<div>
+							<p
+								class="mono mb-4 text-xs uppercase tracking-[0.18em] text-code"
+							>
+								03 / contato
+							</p>
+							<h2
+								class="max-w-xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl"
+							>
+								Vamos construir algo consistente.
+							</h2>
+
+							<address class="mt-10 not-italic">
+								<ul class="border-t border-line">
+									<li
+										class="flex flex-col gap-2 border-b border-line py-5 sm:flex-row sm:justify-between"
+									>
+										<span
+											class="mono text-xs uppercase tracking-widest text-muted"
+											>Local</span
+										>
+										<span class="text-sm text-stone-200"
+											>Cravinhos, SP</span
+										>
+									</li>
+									<li
+										class="flex flex-col gap-2 border-b border-line py-5 sm:flex-row sm:justify-between"
+									>
+										<span
+											class="mono text-xs uppercase tracking-widest text-muted"
+											>E-mail</span
+										>
+										<a
+											class="text-sm text-stone-200 transition hover:text-code"
+											href="mailto:fellipefaria014@gmail.com"
+										>
+											fellipefaria014@gmail.com
+										</a>
+									</li>
+								</ul>
+							</address>
+						</div>
+
+						<form
+							action="https://formspree.io/f/xoevjekr"
+							method="POST"
+							id="contact-form"
+							class="border border-line bg-panel p-6 sm:p-8"
+						>
+							<div class="mb-7">
+								<label
+									for="nome"
+									class="mono mb-3 block text-xs uppercase tracking-widest text-muted"
+								>
+									Nome
+								</label>
+								<input
+									type="text"
+									id="nome"
+									name="nome"
+									required
+									autocomplete="name"
+									placeholder="Seu nome"
+									class="w-full border border-line bg-panel px-4 py-3 text-sm text-stone-200 outline-none transition placeholder:text-muted focus:border-code focus:ring-1 focus:ring-code"
+								/>
+							</div>
+
+							<div class="mb-7">
+								<label
+									for="email"
+									class="mono mb-3 block text-xs uppercase tracking-widest text-muted"
+								>
+									E-mail
+								</label>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									required
+									autocomplete="email"
+									placeholder="voce@email.com"
+									class="w-full border border-line bg-panel px-4 py-3 text-sm text-stone-200 outline-none transition placeholder:text-muted focus:border-code focus:ring-1 focus:ring-code"
+								/>
+							</div>
+
+							<div class="mb-8">
+								<label
+									for="mensagem"
+									class="mono mb-3 block text-xs uppercase tracking-widest text-muted"
+								>
+									Mensagem
+								</label>
+								<textarea
+									id="mensagem"
+									name="mensagem"
+									required
+									rows="5"
+									placeholder="Como posso ajudar?"
+									class="w-full resize-y border border-line bg-panel px-4 py-3 text-sm text-stone-200 outline-none transition placeholder:text-muted focus:border-code focus:ring-1 focus:ring-code"
+								></textarea>
+							</div>
+
+							<div class="flex flex-col gap-4 sm:flex-row">
+								<button
+									type="submit"
+									class="inline-flex items-center justify-center border border-line px-5 py-3 text-sm font-bold text-stone-200 transition hover:border-code hover:text-code"
+								>
+									Enviar por E-mail
+									<span class="ml-3 mono">↗</span>
+								</button>
+
+								<button
+									type="button"
+									id="btn-whatsapp"
+									class="inline-flex items-center justify-center border border-line px-5 py-3 text-sm font-bold text-stone-200 transition hover:border-code hover:text-code"
+								>
+									Enviar por WhatsApp
+									<span class="ml-3 mono text-code">↗</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="border-t border-line px-5 py-6 md:px-8">
+			<div
+				class="mx-auto flex max-w-7xl flex-col justify-between gap-2 text-xs text-muted sm:flex-row"
+			>
+				<p>© 2026 Fellipe Faria.</p>
+				<p class="mono">DESENVOLVIDO COM FOCO E CÓDIGO LIMPO.</p>
+			</div>
+		</footer>
+
+		<script>
+			const menuButton = document.querySelector("#menu-button");
+			const menu = document.querySelector("#menu");
+			menuButton.addEventListener("click", () => {
+				const isOpen =
+					menuButton.getAttribute("aria-expanded") === "true";
+				menuButton.setAttribute("aria-expanded", String(!isOpen));
+				menu.classList.toggle("hidden");
+			});
+			menu.querySelectorAll("a").forEach((link) =>
+				link.addEventListener("click", () => {
+					if (window.innerWidth < 768) {
+						menu.classList.add("hidden");
+						menuButton.setAttribute("aria-expanded", "false");
+					}
+				}),
+			);
+
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("visible");
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{ threshold: 0.12 },
+			);
+			document
+				.querySelectorAll(".reveal")
+				.forEach((element) => observer.observe(element));
+
+			document
+				.getElementById("btn-whatsapp")
+				.addEventListener("click", () => {
+					const nome = document.getElementById("nome").value.trim();
+					const email = document.getElementById("email").value.trim();
+					const mensagem = document
+						.getElementById("mensagem")
+						.value.trim();
+
+					if (!nome || !email || !mensagem) {
+						alert(
+							"Por favor, preencha nome, e-mail e mensagem antes de enviar pelo WhatsApp.",
+						);
+						return;
+					}
+
+					const texto = `Olá Fellipe! Meu nome é ${nome} (${email}). Vi o seu portfólio e gostaria de falar sobre: ${mensagem}`;
+					const mensagemCodificada = encodeURIComponent(texto);
+
+					// Oculta o número em Base64 e descodifica apenas no momento do clique
+					const contato = atob("NTUxNjk5MTIzMTIwNA==");
+
+					window.open(
+						`https://wa.me/${contato}?text=${mensagemCodificada}`,
+						"_blank",
+					);
+				});
+		</script>
+	</body>
+</html>
